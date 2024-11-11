@@ -23,7 +23,7 @@ The project is broken down into two parts: a manual setup and a automatic one, u
 4. Set up an alert for a specific metric.
 5. Automate the setup and testing with shell scripts.
 
-# Method 1 - Manual Setup:
+# Method 1 - Manual Setup
 
 ### Step 1 - Installa and configure NetData
 1. Create a Azure VM with public SSH key and copy public server IP.
