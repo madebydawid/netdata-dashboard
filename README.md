@@ -29,9 +29,10 @@ The project is broken down into two parts: a manual setup and a automatic one, u
 1. Create a Azure VM with public SSH key and copy public server IP.
 <br>
 2. Connect to the VM via:
+
 ```bash
 ssh -i <your-ssh-hey.pub> <username@your-vm-public-IP>
-``` 
+```
 
 3. Update your system packages:
 ```bash
