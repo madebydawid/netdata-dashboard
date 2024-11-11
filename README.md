@@ -32,7 +32,7 @@ The project is broken down into two parts: a manual setup and a automatic one, u
 ```bash
 ssh -i <your-ssh-hey.pub> <username@your-vm-public-IP>
 ``` 
-(*optional*: Add SSH to `~/.ssh/config for easier access [Guide on how to: Configure an SSH alias](https://github.com/madebydawid/ssh-remote-server-setup?tab=readme-ov-file#5-configure-an-ssh-alias)
+(*optional*: Add SSH to `~/.ssh/config for easier access [Guide on how to Configure an SSH alias](https://github.com/madebydawid/ssh-remote-server-setup?tab=readme-ov-file#5-configure-an-ssh-alias)
 
 3. Update your system packages:
 ```bash
@@ -40,7 +40,7 @@ sudo apd update && sudo apt upgrade -y
 ```
 4. Install NetData:
 ```bash
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+bash "curl -Ss https://my-netdata.io/kickstart.sh"
 ```
 5. Start NetData:
 ```bash
