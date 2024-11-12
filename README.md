@@ -77,7 +77,7 @@ sudo nano /etc/netdata/health.d/ram-usage.conf
 Add the following to the file and save it (`ctrl+x & Y`)
 
 ```bash
-# Alarm för RAM-användning over 80%
+# Alarm for RAM-usage over 80%
 alarm: ram_usage
     on: system.ram
     lookup: average -1m percentage of used -15s
