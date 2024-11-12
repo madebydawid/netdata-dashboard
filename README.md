@@ -16,12 +16,6 @@ The project is broken down into two parts: a manual setup and a automatic one, u
 - Basic knowledge of shell scripting.
 - Web browser to access the Netdata dashboard.
 
-## Steps
-1. Install Netdata manually.
-2. Configure Netdata to monitor key metrics.
-3. Customize one aspect of the dashboard.
-4. Set up an alert for a specific metric.
-5. Automate the setup and testing with shell scripts.
 
 # Method 1 - Manual Setup
 
