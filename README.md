@@ -37,7 +37,7 @@ The project is broken down into two parts: a manual setup and a automatic one, u
 
 # Method 1 - Manual Setup
 
-#### Step 1 - Install and configure NetData
+### Step 1 - Install and configure NetData
 
 1. Create a Azure VM with public SSH key and copy public server IP.
 
@@ -143,7 +143,7 @@ crit: $this > 90
 info: CPU utilization over 80%
 ```
 
-#### Step 2 - Stress test your server
+### Step 2 - Stress test your server
 
 1. Install stress-ng tool to test the server
 ```bash
@@ -185,7 +185,7 @@ iperf3 -c localhost
 ```bash
 stress-ng --cpu 2 --vm 1 --vm-bytes 512M --io 2 --timeout 120
 ```
-#### Step 3 - Cleanup System and Remove Netdata
+### Step 3 - Cleanup System and Remove Netdata
 
 1. Stop the Netdata service:
 ```bash
@@ -247,11 +247,26 @@ sudo rm -f /tmp/netdata-kickstart.sh
 ```
 
 6. Clean package cache:
-
 ```bash
 sudo apt clean all
 ```
- 
+7. Verify cleanup:
+```bash
+# Check if Netdata service exists
+systemctl status netdata
+
+# Check for any remaining Netdata processes
+ps aux | grep netdata
+
+# Check for remaining directories
+ls -la /etc/netdata
+ls -la /var/cache/netdata
+ls -la /var/lib/netdata
+ls -la /var/log/netdata
+```
+# Method 2 - Using Shell scripts
+
+### Script 1 - Setup Netdata (setup.sh)
 
 ## Shell Scripts
 
