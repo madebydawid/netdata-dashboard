@@ -4,7 +4,7 @@
 # Author: Dawid Kuzbiel                         ##
 # Date: 14-11-2024                              ##
 #                                               ##
-# Version: v1                                   ##
+# Version: v1.1                                 ##
 #                                               ##
 # Netdata Installation and Configuration Script ##
 #                                               ##
@@ -14,12 +14,18 @@
 ##################################################
 
 # Update system packages
+update_system() {
 echo "Updating system packages..."
 sudo apt update && sudo apt upgrade -y
+}
+
+update_curl() {
+    sudo apt install curl
+}
 
 # Install Netdata
 echo "Installing Netdata..."
-bash curl -sSL https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sudo bash /tmp/netdata-kickstart.sh
+curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /tmp/netdata-kickstart.sh
 
 # Start and enable Netdata service
 echo "Starting and enabling Netdata service..."
