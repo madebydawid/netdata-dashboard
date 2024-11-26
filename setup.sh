@@ -20,6 +20,7 @@ sudo apt update && sudo apt upgrade -y
 }
 
 update_curl() {
+    echo "Installing curl..."
     sudo apt install curl
 }
 
